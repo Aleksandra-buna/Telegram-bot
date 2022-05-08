@@ -34,26 +34,26 @@ const startBot = () => {
 				return bot.sendMessage(chatId, contactsFile)
 			}
 
-			for (const word of contacts) {
+			for (let word of contacts) {
 				if (text.toLowerCase() === word) {
 					return bot.sendMessage(chatId, contactsFile)
 				}
 			}
 
-			for (const word of price) {
+			for (let word of price) {
 				if (text.toLowerCase() === word) {
 					await bot.sendMessage(chatId, paidServicesFile)
 					return bot.sendDocument(chatId, './text_files/price.pdf')
 				}
 			}
 
-			for (const word of importantNumbers) {
+			for (let word of importantNumbers) {
 				if (text.toLowerCase() === word) {
 					return bot.sendMessage(chatId, infoForPatients)
 				}
 			}
 
-			for (const word of infoOnManagment) {
+			for (let word of infoOnManagment) {
 				if (text.toLowerCase() === word) {
 					return bot.sendMessage(chatId, managmentsHospital)
 				}
